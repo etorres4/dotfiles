@@ -1,0 +1,98 @@
+source $XDG_CONFIG_HOME/neomutt/keys
+source $XDG_CONFIG_HOME/neomutt/sidebar
+
+# ========== IMAP settings ==========
+set imap_user = $my_user
+set imap_pass = $my_pass
+
+set mbox_type = Maildir
+set folder = imap://127.0.0.1:1143/
+set record = +Sent
+set postponed = +Drafts
+set spoolfile = +INBOX
+set trash = +TRASH
+mailboxes = +INBOX
+set mail_check = 2 # seconds
+
+# Store message headers to speed things up
+set header_cache = $XDG_CACHE_HOME/neomutt
+
+# Store messages locally to speed things up
+set message_cachedir = $XDG_CACHE_HOME/neomutt
+
+# Save/look for drafts here
+set postponed = +Drafts
+
+# Allow neomutt to open a new IMAP connection automatically
+unset imap_passive
+
+# Keepalive connection (in seconds)
+set imap_keepalive = 300
+
+# Check for mail this often (in seconds)
+set mail_check = 120
+
+# ========== SMTP settings ==========
+set smtp_pass = $my_pass
+set realname = 'Eric Torres'
+set from = $my_user
+set use_from = yes
+
+# Local protonmail bridge server settings
+set smtp_url = smtp://$my_user:$smtp_pass@127.0.0.1:1025
+set ssl_force_tls = yes
+set ssl_starttls = yes
+
+# ========== Miscellaneous Settings ========== 
+# move email to archive
+macro index,pager A ":set confirmappend=no delete=yes\n<tag-prefix><save-message>+Archive\n<sync-mailbox>:set confirmappend=yes delete=ask-yes\n"
+
+# vim-like bindings
+bind index,pager g noop
+bind pager gg top
+bind pager G bottom
+bind alias,index,browser,query gg first-entry
+bind alias,index,browser,query G last-entry
+bind pager j next-line
+bind pager k previous-line
+bind pager \Cj next-entry
+bind pager \Ck previous-entry
+bind index za collapse-thread
+bind index D delete-thread
+bind alias,index,pager,browser,query \Cd half-down
+bind alias,index,pager,browser,query \Cu half-up
+bind index,pager y group-reply
+
+# suppress "press any key to continue"
+unset wait_key
+
+# go to first entry instead of first unread entry when loading a folder
+folder-hook . 'push <first-entry>'
+
+# faster switching of mailboxes
+set sleep_time = 0
+
+# pager interface
+set pager_index_lines = 6                 # number of index lines to show
+set pager_context = 3                     # lines of context
+set pager_stop                          # don't jump to the next email at end of current one
+
+# colors
+color indicator     color16     color35     # selected item
+color index         color110    default ~A  # all messages
+color index         color35     default ~N  # new messages
+color index         color35     default ~U  # unread messages
+color index         color238    default ~D  # deleted messages
+color attachment    color238    default     # attachment headers
+color quoted        color240    default     # quoted emails
+color hdrdefault    green       default     # headers
+color header        color25     default "^(From|To|Cc|Bcc)"
+color header        color33     default "^(Subject)"
+color header        color238    default "^(Date)"
+color status        default     default
+
+# urls
+color body color33 default "([a-z][a-z0-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-f][0-9a-f])*@)?((([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?|[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)(:[0-9]+)?)|([a-z0-9_.!~*'()$,;:@&=+-]|%[0-9a-f][0-9a-f])+)(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?(#([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?|(www|ftp)\\.(([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?(:[0-9]+)?(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?(#([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?)[^].,:;!)? \t\r\n<>\"]"
+
+# emails
+color body color33 default "((@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\]),)*@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\]):)?[0-9a-z_.+%$-]+@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\])"
