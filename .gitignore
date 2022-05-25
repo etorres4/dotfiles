@@ -1,6 +1,13 @@
 # Ferium
-ferium/.config/.cache
-ferium/.config/.tmp
+ferium/.config/ferium/.cache
+ferium/.config/ferium/.tmp
+
+# iTerm2
+iterm2/.config/iterm2/AppSupport/iterm2-daemon*
+iterm2/.config/iterm2/AppSupport/iTermServer*
+iterm2/.config/iterm2/AppSupport/parsers
+iterm2/.config/iterm2/AppSupport/SavedState
+iterm2/.config/iterm2/AppSupport/version.txt
 
 # Neomutt
 neomutt/.config/neomutt/keys
