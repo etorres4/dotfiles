@@ -1,0 +1,26 @@
+# Ferium
+ferium/.config/.cache
+ferium/.config/.tmp
+
+# Neomutt
+neomutt/.config/neomutt/keys
+
+# Neovim
+nvim/.config/nvim/log
+nvim/.config/nvim/lsp.log
+nvim/.config/nvim/.netrwhist
+
+# OBS-studio
+obs-studio/.config/obs-studio/logs
+obs-studio/.config/obs-studio/profiler_data
+
+# OpenRGB
+OpenRGB/.config/logs
+
+# Protonmail
+protonmail/.config/bridge/cache
+protonmail/.config/bridge.pem
+
+# zsh
+zsh/.config/zsh/.zcompdump
+zsh/.config/zsh/.zsh_history
