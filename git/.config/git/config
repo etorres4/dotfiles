@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[user]
+name = Eric Torres
+email = erictorres4@protonmail.com
+[core]
+	pager = nvim -R
+[color]
+	pager = no
