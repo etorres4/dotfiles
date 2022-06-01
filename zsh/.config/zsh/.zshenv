@@ -4,12 +4,12 @@
 #export FZF_DEFAULT_COMMAND="fd --threads $(nproc) --type f --hidden --color=never"
 
 # XDG Base Directory Support
-export CARGO_HOME="${XDG_DATA_HOME}/.local/share}/cargo"
-export GNUPGHOME="${XDG_DATA_HOME}/.local/share}/gnupg"
-export GTK2_RC_FILES="${XDG_CONFIG_HOME}/.config}/gtk-2.0/gtkrc"
+export CARGO_HOME="${XDG_DATA_HOME}/cargo"
+export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
+export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0/gtkrc"
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/.config}/java"
-export KDEHOME="${XDG_CONFIG_HOME}/.config}/kde"
-export LESSHISTFILE="${XDG_CACHE_HOME}/.cache}/less/history"
+export KDEHOME="${XDG_CONFIG_HOME}/kde"
+export LESSHISTFILE="${XDG_CACHE_HOME}/less/history"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME}/password-store"
 export PYLINT_HOME="${XDG_CACHE_HOME}/pylint"
 export PYTHON_EGG_CACHE="${XDG_CACHE_HOME}/python-eggs"
