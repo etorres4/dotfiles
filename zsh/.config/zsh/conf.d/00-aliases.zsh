@@ -57,7 +57,7 @@ alias lspkg="pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, na
 alias ql='pacman -Qql'
 alias pacsearch='pacman -Ss'
 alias rpmget='aur sync -d rpm'
-alias -g updatemirrors="reflector --verbose --country 'United States' --latest 200 --age 24 --sort rate --save /etc/pacman.d/mirrorlist"
+alias -g updatemirrors="reflector --verbose --country 'United States' --latest 20 --age 24 --protocol rsync --sort rate --save /etc/pacman.d/mirrorlist"
 
 # ========== Packaging ==========
 # Arch Linux
