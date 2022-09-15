@@ -57,7 +57,7 @@ alias lspkg="pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, na
 alias ql='pacman -Qql'
 alias pacsearch='pacman -Ss'
 alias rpmget='aur sync -d rpm'
-alias -g updatemirrors="reflector --verbose --country 'United States' --latest 20 --age 24 --protocol rsync --sort rate --save /etc/pacman.d/mirrorlist"
+alias -g updatemirrors="reflector --verbose --country 'United States' --latest 20 --age 24 --sort rate --save /etc/pacman.d/mirrorlist"
 
 # ========== Packaging ==========
 # Arch Linux
@@ -101,6 +101,7 @@ alias pyarchive='git archive -o rbackup-"$(python setup.py --version)".tar.gz --
 alias scpe='scp -i "${HOME}/.ssh/empress"'
 
 # system
+alias bootloader='cd /boot/loader/entries'
 alias myip='curl ifconfig.me'
 alias restartfans='sudo systemctl restart fancontrol.service'
 
