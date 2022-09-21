@@ -152,6 +152,6 @@ stow-config () {
 }
 
 getwifipassword() {
-    security find-generic-password -ga "$1" | rg "password
+    security find-generic-password -ga "$1" | rg "password"
 }
 
