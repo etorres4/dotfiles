@@ -1,10 +1,10 @@
 # ---------- Normal Aliases ----------
 # Common commands
-alias cp='cp -piv'
-alias mv='mv -iv'
+alias cp='gcp -piv'
+alias mv='gmv -iv'
 # Use safe-rm instead of rm
 alias rm='safe-rm -iv'
-alias rmdir='rmdir -v'
+alias rmdir='grmdir -v'
 
 # Games
 alias add-modrinth='ferium add-modrinth'
@@ -73,10 +73,10 @@ alias pr='makepkg --force --clean --cleanbuild --syncdeps --rmdeps && addpkg rpm
 # Personal
 alias :q='exit'
 alias ct='cptemplate'
-alias less='less -i --'
-alias la='ls --almost-all --color --group-directories-first --human-readable -l'
-alias ls='ls --color --group-directories-first'
-alias ll='ls --classify --color --group-directories-first --human-readable -l'
+#alias less='less -i --'
+alias la='gls --almost-all --color --group-directories-first --human-readable -l'
+alias ls='gls --color --group-directories-first'
+alias ll='gls --classify --color --group-directories-first --human-readable -l'
 alias python='python3'
 alias spcli='speedtest-cli --secure'
 alias sshconfig='"${EDITOR}" -- ${HOME}/.ssh/config'
@@ -150,3 +150,8 @@ stow-config () {
         fi
     done
 }
+
+getwifipassword() {
+    security find-generic-password -ga "$1" | rg "password
+}
+

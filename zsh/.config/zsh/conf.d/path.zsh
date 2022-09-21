@@ -1,4 +1,4 @@
 # PATH variable configuration 
-path=("${HOME}/Scripts/Arch Linux Helpers" $path)
+path=("${HOME}/Scripts/macOS Helpers" "${HOME}/.local/bin" $path)
 
 export PATH
