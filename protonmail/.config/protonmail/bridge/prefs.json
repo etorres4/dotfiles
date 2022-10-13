@@ -16,7 +16,7 @@
 	"first_time_start_gui": "true",
 	"imap_workers": "16",
 	"is_all_mail_visible": "true",
-	"last_heartbeat": "268",
+	"last_heartbeat": "285",
 	"last_used_version": "2.3.0+git",
 	"preferred_keychain": "secret-service",
 	"rebranding_migrated": "true",
