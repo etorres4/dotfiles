@@ -13,6 +13,9 @@ set hidden
 " Disables vi compatibility
 set nocompatible
 
+" Disables mouse
+set mouse=
+
 " Colors
 set termguicolors
 "set background=light
