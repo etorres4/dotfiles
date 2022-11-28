@@ -1,6 +1,7 @@
 # ---------- Normal Aliases ----------
 # Common commands
 alias cp='gcp -piv'
+alias mkdir='gmkdir'
 alias mv='gmv -iv'
 # Use safe-rm instead of rm
 alias rm='safe-rm -iv'
@@ -18,7 +19,7 @@ alias gc='git commit'
 alias gca='git commit -a'
 alias gco='git checkout'
 alias gconf='${EDITOR} -- "${XDG_CONFIG_HOME:-${HOME}/.config}/git/config"'
-alias gmv='git mv'
+#alias gmv='git mv'
 alias grm='git rm'
 alias gs='git status'
 alias gtv='printf "%s" "$(git describe --long | sed "s/\([^-]*-\)g/r\1/;s/-/./g")"'
