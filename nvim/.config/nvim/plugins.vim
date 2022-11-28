@@ -116,3 +116,10 @@ nnoremap <silent> <f5> :call fzf#run({
 \   'options': '+m',
 \   'down':    len(<sid>buflist()) + 2
 \ })<CR>
+
+" ---------- Neoformat ----------
+"let g:neoformat_only_msg_on_error = 1
+"let g:neoformat_verbose = 1 " only affects the verbosity of Neoformat
+
+" C/C++ config
+let g:neoformat_enabled_cpp = ['uncrustify', 'clang-format']

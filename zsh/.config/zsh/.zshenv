@@ -14,6 +14,7 @@ export PASSWORD_STORE_DIR="${XDG_DATA_HOME}/password-store"
 export PYLINT_HOME="${XDG_CACHE_HOME}/pylint"
 export PYTHON_EGG_CACHE="${XDG_CACHE_HOME}/python-eggs"
 export PYTHON_STARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
+export UNCRUSTIFY_CONFIG="${XDG_CONFIG_HOME}/uncrustify/uncrustify.conf"
 export WINEPREFIX="${XDG_DATA_HOME}/wine"
 
 # nnn
