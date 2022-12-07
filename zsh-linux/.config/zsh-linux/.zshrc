@@ -61,15 +61,5 @@ mkcd() {
 
 autoload -Uz mkcd
 
-# Detect OS to autoload uncommon config files
-if [[ "$(uname -a)" == "Darwin" ]]; then
-    for dotfile in "${XDG_CONFIG_HOME}"/zsh-macos/**/*; do
-        source $dotfile
-    done
-    [ -f "${ZDOTDIR}/conf.d/fzf.zsh" ] && source "${ZDOTDIR}/conf.d/fzf.zsh"
-    test -e /Users/etorres/.config/zsh/.iterm2_shell_integration.zsh && source /Users/etorres/.config/zsh/.iterm2_shell_integration.zsh || true
-else
-    for dotfile in "${XDG_CONFIG_HOME}"/zsh-linux/**/*; do
-        source $dotfile
-    done
-fi
+[ -f "${ZDOTDIR}/conf.d/fzf.zsh" ] && source "${ZDOTDIR}/conf.d/fzf.zsh"
+test -e /Users/etorres/.config/zsh/.iterm2_shell_integration.zsh && source /Users/etorres/.config/zsh/.iterm2_shell_integration.zsh || true
