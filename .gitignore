@@ -31,3 +31,4 @@ protonmail/.config/protonmail/bridge/*.pem
 # zsh
 zsh/.config/zsh/.zcompdump
 zsh/.config/zsh/.zsh_history
+zsh-macos/.config/zsh-macos/.macos_zsh_history
