@@ -107,42 +107,23 @@ alias myip='curl ifconfig.me'
 alias restartfans='sudo systemctl restart fancontrol.service'
 
 # zsh
-alias zdotdir='cd -- ${ZDOTDIR:-${HOME}/.zsh}'
-alias zshaliases='${EDITOR} -- ${ZDOTDIR:-${HOME}/.zsh}/conf.d/00-aliases.zsh'
-alias zbindings='${EDITOR} -- ${ZDOTDIR:-${HOME}/.zsh}/conf.d/keybindings.zsh'
-alias zconf='cd -- ${ZDOTDIR:-${HOME}/.zsh}/conf.d'
-alias zfuncs='cd -- ${ZDOTDIR:-${HOME}/.zsh}/conf.d/functions'
-alias zhist='${EDITOR} -- ${HISTFILE}'
-alias zmod='cd -- ${ZDOTDIR:-${HOME}/.zsh}/conf.d/modules'
-alias zpath='${EDITOR} -- ${ZDOTDIR:-${HOME}/.zsh}/conf.d/path.zsh'
-alias zprompt='${EDITOR} -- ${ZDOTDIR:-${HOME}/.zsh}/conf.d/prompt.zsh'
-alias zshrc='${EDITOR} -- ${ZDOTDIR:-${HOME}/.zsh}/.zshrc'
-alias zshrefresh='source -- ${ZDOTDIR:-${HOME}/.zsh}/.zshrc'
-alias zshenv='${EDITOR} -- ${ZDOTDIR:-${HOME}/.zsh}/.zshenv'
+alias zdotdir='cd -- "$ZDOTDIR"'
+alias zshaliases='${EDITOR} -- "$XDG_CONFIG_HOME"/zsh-macos/00-aliases.zsh'
+alias zbindings='${EDITOR} -- "$XDG_CONFIG_HOME"/zsh/00-keybindings.zsh'
+alias zconf='cd -- $ZDOTDIR'
+alias zhist='${EDITOR} -- "${HISTFILE}"'
+alias zpath='${EDITOR} -- "$XDG_CONFIG_HOME"/zsh-macos/path.zsh'
+alias zprompt='${EDITOR} -- "$ZDOTDIR"/prompt.zsh'
+alias zshrc='${EDITOR} -- "$ZDOTDIR"/.zshrc'
+alias zshenv='${EDITOR} -- "$ZDOTDIR"/.zshenv'
 
 # ---------- Parameterized Aliases ----------
-lsbin() {
-    if [[ -n $1 ]]; then
-        pacman -Qql $1 | rg bin
-    else
-        return 0
-    fi
-}
-
-rgenv () {
-    if [[ -n $1 ]]; then
-        env | rg --ignore-case $1
-    else
-        return 0
-    fi
-}
-
 stow-config () {
     local dotfile_dir="${HOME}/Dotfiles"
 
     for conf in "${@}"; do
         if [[ -n ${conf} ]]; then
-            mkdir --parents "${dotfile_dir}/${conf}/.config"
+            mkdir -p "${dotfile_dir}/${conf}/.config"
             mv "${XDG_CONFIG_HOME}/${conf}" "${dotfile_dir}/${conf}/.config"
             cd "${dotfile_dir}" && stow "${conf}"
             cd -

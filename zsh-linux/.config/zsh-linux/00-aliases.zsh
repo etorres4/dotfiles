@@ -110,7 +110,6 @@ alias zdotdir='cd -- ${ZDOTDIR:-${HOME}/.zsh}'
 alias zshaliases='${EDITOR} -- ${ZDOTDIR:-${HOME}/.zsh}/conf.d/00-aliases.zsh'
 alias zbindings='${EDITOR} -- ${ZDOTDIR:-${HOME}/.zsh}/conf.d/keybindings.zsh'
 alias zconf='cd -- ${ZDOTDIR:-${HOME}/.zsh}/conf.d'
-alias zfuncs='cd -- ${ZDOTDIR:-${HOME}/.zsh}/conf.d/functions'
 alias zhist='${EDITOR} -- ${HISTFILE}'
 alias zmod='cd -- ${ZDOTDIR:-${HOME}/.zsh}/conf.d/modules'
 alias zpath='${EDITOR} -- ${ZDOTDIR:-${HOME}/.zsh}/conf.d/path.zsh'
@@ -123,14 +122,6 @@ alias zshenv='${EDITOR} -- ${ZDOTDIR:-${HOME}/.zsh}/.zshenv'
 lsbin() {
     if [[ -n $1 ]]; then
         pacman -Qql $1 | rg bin
-    else
-        return 0
-    fi
-}
-
-rgenv () {
-    if [[ -n $1 ]]; then
-        env | rg --ignore-case $1
     else
         return 0
     fi

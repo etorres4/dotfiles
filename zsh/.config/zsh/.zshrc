@@ -61,6 +61,14 @@ mkcd() {
 
 autoload -Uz mkcd
 
+rgenv () {
+    if [[ -n $1 ]]; then
+        env | rg --ignore-case $1
+    else
+        return 0
+    fi
+}
+
 # Detect OS to autoload uncommon config files
 if [[ "$(uname)" =~ "Darwin" ]]; then
     for dotfile in "$XDG_CONFIG_HOME"/zsh-macos/*(.); do
