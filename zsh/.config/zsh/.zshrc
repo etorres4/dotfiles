@@ -71,11 +71,11 @@ rgenv () {
 
 # Detect OS to autoload uncommon config files
 if [[ "$(uname)" =~ "Darwin" ]]; then
-    for dotfile in "$XDG_CONFIG_HOME"/zsh-macos/*(.); do
+    for dotfile in "$XDG_CONFIG_HOME"/zsh-macos/*zsh*(.); do
         source $dotfile
     done
 else
-    for dotfile in "$XDG_CONFIG_HOME"/zsh-linux/*(.); do
+    for dotfile in "$XDG_CONFIG_HOME"/zsh-linux/*zsh*(.); do
         source $dotfile
     done
 fi
