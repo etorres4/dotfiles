@@ -74,8 +74,13 @@ if [[ "$(uname)" =~ "Darwin" ]]; then
     for dotfile in "$XDG_CONFIG_HOME"/zsh-macos/*zsh*(.); do
         source $dotfile
     done
+<<<<<<< HEAD
 else
     for dotfile in "$XDG_CONFIG_HOME"/zsh-linux/*zsh*(.); do
+=======
+elif [[ "$(uname)" =~ "Linux" ]]; then
+    for dotfile in "$XDG_CONFIG_HOME"/zsh-linux/*(.); do
+>>>>>>> 15e4531 (Change check for linux os-specific files)
         source $dotfile
     done
 fi
