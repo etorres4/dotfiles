@@ -55,7 +55,7 @@ autoload -Uz cf
 # Make a directory, then change into it
 
 mkcd() {
-    [[ ! -d "${1}" ]] && mkdir --parents -- "${1}"
+    [[ ! -d "${1}" ]] && gmkdir --parents -- "${1}"
     cd "${1}" || exit
 }
 
