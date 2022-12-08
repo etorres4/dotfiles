@@ -1,11 +1,10 @@
 # ---------- Normal Aliases ----------
 # Common commands
-alias cp='gcp -piv'
-alias mkdir='gmkdir'
-alias mv='gmv -iv'
+alias cp='cp -piv'
+alias mv='mv -iv'
 # Use safe-rm instead of rm
 alias rm='safe-rm -iv'
-alias rmdir='grmdir -v'
+alias rmdir='rmdir -v'
 
 # Games
 alias add-modrinth='ferium add-modrinth'
@@ -19,7 +18,7 @@ alias gc='git commit'
 alias gca='git commit -a'
 alias gco='git checkout'
 alias gconf='${EDITOR} -- "${XDG_CONFIG_HOME:-${HOME}/.config}/git/config"'
-#alias gmv='git mv'
+alias gmv='git mv'
 alias grm='git rm'
 alias gs='git status'
 alias gtv='printf "%s" "$(git describe --long | sed "s/\([^-]*-\)g/r\1/;s/-/./g")"'
@@ -74,10 +73,10 @@ alias pr='makepkg --force --clean --cleanbuild --syncdeps --rmdeps && addpkg rpm
 # Personal
 alias :q='exit'
 alias ct='cptemplate'
-#alias less='less -i --'
-alias la='gls --almost-all --color --group-directories-first --human-readable -l'
-alias ls='gls --color --group-directories-first'
-alias ll='gls --classify --color --group-directories-first --human-readable -l'
+alias less='less -i --'
+alias la='ls --almost-all --color --group-directories-first --human-readable -l'
+alias ls='ls --color --group-directories-first'
+alias ll='ls --classify --color --group-directories-first --human-readable -l'
 alias python='python3'
 alias spcli='speedtest-cli --secure'
 alias sshconfig='"${EDITOR}" -- ${HOME}/.ssh/config'
@@ -151,8 +150,3 @@ stow-config () {
         fi
     done
 }
-
-getwifipassword() {
-    security find-generic-password -ga "$1" | rg "password"
-}
-
