@@ -23,5 +23,3 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
 # Automatically load new executables
 zstyle ':completion:*' rehash true
-
-# vim: syntax=zsh

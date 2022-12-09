@@ -9,5 +9,3 @@ _load_tmux() {
 
 zle -N _load_tmux
 bindkey -M viins "^y" _load_tmux
-
-# vim: syntax=zsh

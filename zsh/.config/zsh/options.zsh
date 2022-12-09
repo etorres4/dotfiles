@@ -10,5 +10,3 @@ setopt correctall
 
 # prevent accidental overwriting of a file
 setopt noclobber
-
-# vim: syntax=zsh

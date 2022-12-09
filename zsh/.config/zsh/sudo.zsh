@@ -19,5 +19,3 @@ zle -N sudo-command-line
 # Defined shortcut keys: [Esc] [Esc]
 bindkey -M viins "\e\e" sudo-command-line
 bindkey -M vicmd "\e\e" sudo-command-line
-
-# vim: syntax=zsh
