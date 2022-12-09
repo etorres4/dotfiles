@@ -53,6 +53,11 @@ alias pr='makepkg --force --clean --cleanbuild --syncdeps --rmdeps && addpkg rpm
 #alias pytest='pytest --numprocesses=$(nproc)'
 alias pyarchive='git archive -o rbackup-"$(python setup.py --version)".tar.gz --prefix=rbackup-"$(python setup.py --version)"/'
 
+# Personal
+alias la='ls --almost-all --color --group-directories-first --human-readable -l'
+alias ls='ls --color --group-directories-first'
+alias ll='ls --classify --color --group-directories-first --human-readable -l'
+
 # system
 alias bootloader='cd /boot/loader/entries'
 alias restartfans='sudo systemctl restart fancontrol.service'

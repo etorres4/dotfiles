@@ -23,18 +23,10 @@ alias gtv='printf "%s" "$(git describe --long | sed "s/\([^-]*-\)g/r\1/;s/-/./g"
 alias gnv='printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"'
 alias gr='git reset'
 
-#========= Package Management =========
-# Navigation
-alias dirconf='"${EDITOR}" -- "${XDG_CONFIG_HOME:-${HOME}/.config}/user-dirs.dirs"'
-alias dotfiles='cd "${HOME}/Dotfiles"'
-alias xch='cd -- ${XDG_CONFIG_HOME:-${HOME}/.config}'
-alias xcah='cd -- ${XDG_CACHE_HOME:-${HOME}/.cache}'
-alias xdh='cd -- ${XDG_DATA_HOME:-${HOME}/.local/share}'
-
-# Programming
-# Use python-pytest-xdist plugin
-#alias pytest='pytest --numprocesses=$(nproc)'
-alias pyarchive='git archive -o rbackup-"$(python setup.py --version)".tar.gz --prefix=rbackup-"$(python setup.py --version)"/'
+# Personal
+alias la='gls --almost-all --color --group-directories-first --human-readable -l'
+alias ls='gls --color --group-directories-first'
+alias ll='gls --classify --color --group-directories-first --human-readable -l'
 
 # system
 alias myip='curl ifconfig.me'
@@ -51,7 +43,7 @@ alias zshrc='${EDITOR} -- "$ZDOTDIR"/.zshrc'
 alias zshenv='${EDITOR} -- "$ZDOTDIR"/.zshenv'
 
 # ---------- Parameterized Aliases ----------
-# Use macOS-specific flags
+# Use macOS-specific command line flags
 stow-config () {
     local dotfile_dir="${HOME}/Dotfiles"
 
