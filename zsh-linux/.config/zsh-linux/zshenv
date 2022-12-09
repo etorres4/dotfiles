@@ -22,10 +22,6 @@ export WINEPREFIX="${XDG_DATA_HOME}/wine"
 #export NNN_TRASH=1
 #export NNN_USE_EDITOR=1
 
-#export HOMEBREW_NO_AUTO_UPDATE=1
-
-#export LD_LIBRARY_PATH="/Library/Developer/CommandLineTools/usr/lib/:$LD_LIBRARY_PATH"
-
 export PAGER="nvimpager"
 export AUR_PAGER="ranger"
 

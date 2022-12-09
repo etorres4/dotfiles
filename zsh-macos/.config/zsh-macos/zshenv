@@ -27,7 +27,6 @@ export WINEPREFIX="${XDG_DATA_HOME}/wine"
 #export LD_LIBRARY_PATH="/Library/Developer/CommandLineTools/usr/lib/:$LD_LIBRARY_PATH"
 
 export PAGER="nvimpager"
-export AUR_PAGER="ranger"
 
 # Manpager using vim/nvim
 #export MANPAGER='nvim +Man!'
