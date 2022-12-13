@@ -27,6 +27,7 @@ alias gr='git reset'
 alias la='gls --almost-all --color --group-directories-first --human-readable -l'
 alias ls='gls --color --group-directories-first'
 alias ll='gls --classify --color --group-directories-first --human-readable -l'
+alias pacsearch='pacman -Ss'
 
 # system
 alias myip='curl ifconfig.me'
