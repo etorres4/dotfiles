@@ -48,6 +48,12 @@ alias pa='makepkg --force --clean --cleanbuild --syncdeps --rmdeps && addpkg aur
 alias pc='makepkg --force --clean --cleanbuild --syncdeps --rmdeps && addpkg custom'
 alias pr='makepkg --force --clean --cleanbuild --syncdeps --rmdeps && addpkg rpm'
 
+# firewall
+alias -g fwperm='firewall-cmd --runtime-to-permanent'
+alias -g listfw='firewall-cmd --list-all'
+alias -g listports='firewall-cmd --list-ports'
+alias -g listservices='firewall-cmd --list-services'
+
 # Programming
 # Use python-pytest-xdist plugin
 #alias pytest='pytest --numprocesses=$(nproc)'
@@ -84,7 +90,7 @@ lsbin() {
 }
 
 # Use GNU long flags
-stow-config () {
+stow-config() {
     local dotfile_dir="${HOME}/Dotfiles"
 
     for conf in "${@}"; do
