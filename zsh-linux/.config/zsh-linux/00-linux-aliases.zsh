@@ -62,6 +62,17 @@ alias ll='ls --classify --color --group-directories-first --human-readable -l'
 alias bootloader='cd /boot/loader/entries'
 alias restartfans='sudo systemctl restart fancontrol.service'
 
+# zsh
+alias zdotdir='cd -- ${ZDOTDIR}'
+alias zshaliases='${EDITOR} -- "${XDG_CONFIG_HOME}"/zsh-linux/00-linux-aliases.zsh'
+alias zbindings='${EDITOR} -- ${ZDOTDIR}/keybindings.zsh'
+alias zhist='${EDITOR} -- ${HISTFILE}'
+alias zpath='${EDITOR} -- ${ZDOTDIR}/path.zsh'
+alias zprompt='${EDITOR} -- ${ZDOTDIR}/prompt.zsh'
+alias zshrc='${EDITOR} -- ${ZDOTDIR}/.zshrc'
+alias zshrefresh='source -- ${ZDOTDIR}/.zshrc'
+alias zshenv='${EDITOR} -- ${ZDOTDIR}/.zshenv'
+
 # ---------- Parameterized Aliases ----------
 # List all binaries of a given package
 lsbin() {
