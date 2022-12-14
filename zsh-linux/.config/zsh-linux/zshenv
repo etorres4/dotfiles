@@ -1,4 +1,4 @@
-# Local Environment Variables
+# Linux-specific environment variables
 #export SSH_ASKPASS='/usr/bin/ksshaskpass ssh-add < /dev/null'
 
 #export FZF_DEFAULT_COMMAND="fd --threads $(nproc) --type f --hidden --color=never"
