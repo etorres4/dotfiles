@@ -34,7 +34,7 @@ alias myip='curl ifconfig.me'
 
 # zsh
 alias zdotdir='cd -- ${ZDOTDIR}'
-alias zshaliases='${EDITOR} -- "${XDG_CONFIG_HOME}"/zsh-linux/00-macos-aliases.zsh'
+alias zshaliases='${EDITOR} -- "${XDG_CONFIG_HOME}"/zsh-macos/00-macos-aliases.zsh'
 alias zbindings='${EDITOR} -- ${ZDOTDIR}/keybindings.zsh'
 alias zhist='${EDITOR} -- ${HISTFILE}'
 alias zpath='${EDITOR} -- ${ZDOTDIR}/path.zsh'
