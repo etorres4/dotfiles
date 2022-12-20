@@ -29,7 +29,16 @@ precmd() {
     vcs_info
 }
 
+# ----- Left Prompts -----
+# <user>@<host> >
 #PS1='%F{blue}%n%f@%m %F{green}%3~%f > '
+# <path> >
+#PS1='%F{green}%3~%f %F{blue}>%f '
+# <path> <host> >
+PS1='%F{green}%3~%f %F{yellow}%m%f %F{blue}>%f '
+
+# ----- Right Prompts -----
+# Git and vim mode info
 #RPS1='%F{green}${vim_mode}%f ${vcs_info_msg_0_} [%F{red}%?%f]'
-PS1='%F{green}%3~%f %F{blue}>%f '
+# Git info only
 RPS1='${vcs_info_msg_0_} [%F{red}%?%f]'
