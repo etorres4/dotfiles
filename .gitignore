@@ -24,10 +24,6 @@ obs-studio/.config/obs-studio/profiler_data
 # OpenRGB
 OpenRGB/.config/OpenRGB/logs
 
-# Protonmail
-protonmail/.config/protonmail/bridge/cache
-protonmail/.config/protonmail/bridge/*.pem
-
 # zsh
 zsh/.config/zsh/.zcompdump
 zsh/.config/zsh/.zsh_history
