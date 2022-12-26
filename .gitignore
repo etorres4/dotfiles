@@ -24,6 +24,9 @@ obs-studio/.config/obs-studio/profiler_data
 # OpenRGB
 OpenRGB/.config/OpenRGB/logs
 
+# tmux
+tmux/.config/tmux/plugins
+
 # zsh
 zsh/.config/zsh/.zcompdump
 zsh/.config/zsh/.zsh_history
