@@ -49,10 +49,10 @@ alias pc='makepkg --force --clean --cleanbuild --syncdeps --rmdeps && addpkg cus
 alias pr='makepkg --force --clean --cleanbuild --syncdeps --rmdeps && addpkg rpm'
 
 # firewall
-alias -g fwperm='firewall-cmd --runtime-to-permanent'
-alias -g listfw='firewall-cmd --list-all'
-alias -g listports='firewall-cmd --list-ports'
-alias -g listservices='firewall-cmd --list-services'
+alias -g fwrtp='firewall-cmd --runtime-to-permanent'
+alias -g fwla='firewall-cmd --list-all'
+alias -g fwlsp='firewall-cmd --list-ports'
+alias -g fwlss='firewall-cmd --list-services'
 
 # Programming
 # Use python-pytest-xdist plugin
