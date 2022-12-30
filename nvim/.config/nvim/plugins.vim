@@ -117,7 +117,10 @@ nnoremap <silent> <f5> :call fzf#run({
 \   'down':    len(<sid>buflist()) + 2
 \ })<CR>
 
-" Neoformat
+" ---------- Neoformat ----------
+" Override python formatter
+let g:neoformat_enabled_python=['black']
+
 " Enable alignment
 let g:neoformat_basic_format_align = 1
 
