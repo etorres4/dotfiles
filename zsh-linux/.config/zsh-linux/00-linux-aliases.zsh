@@ -49,7 +49,7 @@ alias pc='makepkg --force --clean --cleanbuild --syncdeps --rmdeps && addpkg cus
 alias pr='makepkg --force --clean --cleanbuild --syncdeps --rmdeps && addpkg rpm'
 
 # firewall
-alias -g fwrtp='firewall-cmd --runtime-to-permanent'
+alias -g fwcmd='firewall-cmd'
 alias -g fwla='firewall-cmd --list-all'
 alias -g fwlsp='firewall-cmd --list-ports'
 alias -g fwlss='firewall-cmd --list-services'
