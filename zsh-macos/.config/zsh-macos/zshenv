@@ -6,7 +6,7 @@
 # XDG Base Directory Support
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
-export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/.config}/java"
+export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java"
 export LESSHISTFILE="${XDG_CACHE_HOME}/less/history"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME}/password-store"
 export PYLINT_HOME="${XDG_CACHE_HOME}/pylint"
