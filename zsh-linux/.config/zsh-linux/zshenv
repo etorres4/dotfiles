@@ -3,6 +3,8 @@
 
 #export FZF_DEFAULT_COMMAND="fd --threads $(nproc) --type f --hidden --color=never"
 
+export CHROOT="$HOME/Packages/chroot"
+
 # XDG Base Directory Support
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
