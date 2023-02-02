@@ -78,7 +78,7 @@ alias zpath='${EDITOR} -- ${ZDOTDIR}/path.zsh'
 alias zprompt='${EDITOR} -- ${ZDOTDIR}/prompt.zsh'
 alias zshrc='${EDITOR} -- ${ZDOTDIR}/.zshrc'
 alias zshrefresh='source -- ${ZDOTDIR}/.zshrc'
-alias zshenv='${EDITOR} -- ${ZDOTDIR}/.zshenv'
+alias zshenv='${EDITOR} -- ${XDG_CONFIG_HOME}/zsh-linux/zshenv'
 
 # ---------- Parameterized Aliases ----------
 # List all binaries of a given package
