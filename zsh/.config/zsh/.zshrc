@@ -52,15 +52,6 @@ cf() {
 
 autoload -Uz cf
 
-# Make a directory, then change into it
-
-mkcd() {
-    [[ ! -d "${1}" ]] && mkdir --parents -- "${1}"
-    cd "${1}" || exit
-}
-
-autoload -Uz mkcd
-
 rgenv () {
     if [[ -n $1 ]]; then
         env | rg --ignore-case $1
