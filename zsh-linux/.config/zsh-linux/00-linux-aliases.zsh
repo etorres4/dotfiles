@@ -29,7 +29,7 @@ alias gr='git reset'
 # Arch Linux
 alias aurget='aur sync -d aur'
 alias -g autoremove='pacman -Rns $(pacman -Qtdq)'
-alias checkaurupdates='aur sync -d aur --upgrades'
+alias checkaurupdates='aur sync -d aur --upgrades --chroot'
 # alias does not work correctly for some reason
 alias lspkg="pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h"
 alias ql='pacman -Qql'
