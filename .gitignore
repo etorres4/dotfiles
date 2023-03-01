@@ -24,6 +24,9 @@ obs-studio/.config/obs-studio/profiler_data
 # OpenRGB
 OpenRGB/.config/OpenRGB/logs
 
+# systemd misc
+systemd/.config/systemd/user/default.target.wants
+
 # tmux
 tmux/.config/tmux/plugins
 
