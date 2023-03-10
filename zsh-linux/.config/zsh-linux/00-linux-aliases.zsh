@@ -27,7 +27,7 @@ alias gr='git reset'
 
 #========= Package Management =========
 # Arch Linux
-alias aurget='aur sync -d aur'
+alias aurget='aur sync -d aur --chroot'
 alias -g autoremove='pacman -Rns $(pacman -Qtdq)'
 alias checkaurupdates='aur sync -d aur --upgrades --chroot'
 # alias does not work correctly for some reason
