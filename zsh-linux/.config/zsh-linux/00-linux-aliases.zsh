@@ -68,6 +68,7 @@ alias ll='ls --classify --color --group-directories-first --human-readable -l'
 alias bootloader='cd /boot/loader/entries'
 alias restartfans='sudo systemctl restart fancontrol.service'
 alias dcips=$'docker inspect -f \'{{.Name}}-{{range  $k, $v := .NetworkSettings.Networks}}{{$k}}-{{.IPAddress}} {{end}}-{{range $k, $v := .NetworkSettings.Ports}}{{ if not $v }}{{$k}} {{end}}{{end}} -{{range $k, $v := .NetworkSettings.Ports}}{{ if $v }}{{$k}} => {{range . }}{{ .HostIp}}:{{.HostPort}}{{end}}{{end}} {{end}}\' $(docker ps -aq) | column -t -s-'
+alias list-docker-root='for c in $(docker ps -q); do docker inspect $c -f "{{ .Name }}:"; docker top $c | awk '{print $1, $2, $8}'; echo "--------------"; done'
 
 # zsh
 alias zdotdir='cd -- ${ZDOTDIR}'
