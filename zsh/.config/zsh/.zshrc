@@ -42,7 +42,7 @@ cf() {
     dir="$(fd --ignore-file "${XDG_CONFIG_HOME}/fd_ignore" --print0 --type d -- "${@}" | fzf --read0 --select-1 --exit-0)"
 
     [[ -z "${dir}" ]] && return 1
- 
+
     if [[ -f "${dir}" ]]; then
         cd "${dir%/*}"
     else
@@ -52,12 +52,22 @@ cf() {
 
 autoload -Uz cf
 
-rgenv () {
+rgenv() {
     if [[ -n $1 ]]; then
         env | rg --ignore-case $1
     else
         return 0
     fi
+}
+
+# Update a docker container using docker compose
+# Note: must be in the container directory
+dockerupdate() {
+    docker compose down
+    until docker compose pull; do
+        docker compose pull
+    done
+    docker compose up -d
 }
 
 # Detect OS to autoload uncommon config files
