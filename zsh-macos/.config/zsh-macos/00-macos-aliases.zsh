@@ -31,14 +31,15 @@ alias pacsearch='pacman -Ss'
 
 # system
 alias myip='curl ifconfig.me'
+alias pipupgrade='pip --disable-pip-version-check list --outdated --format=json | python -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U'
 
 # zsh
 alias zdotdir='cd -- ${ZDOTDIR}'
 alias zshaliases='${EDITOR} -- "${XDG_CONFIG_HOME}"/zsh-macos/00-macos-aliases.zsh'
 alias zbindings='${EDITOR} -- ${ZDOTDIR}/keybindings.zsh'
 alias zhist='${EDITOR} -- ${HISTFILE}'
-alias zpath='${EDITOR} -- ${ZDOTDIR}/path.zsh'
-alias zprompt='${EDITOR} -- ${ZDOTDIR}/prompt.zsh'
+alias zpath='${EDITOR} -- ${XDG_CONFIG_HOME}/zsh-macos/path.zsh'
+alias zprompt='${EDITOR} -- ${XDG_CONFIG_HOME}/zsh-macos/prompt.zsh'
 alias zshrc='${EDITOR} -- ${ZDOTDIR}/.zshrc'
 alias zshrefresh='source -- ${ZDOTDIR}/.zshrc'
 alias zshenv='${EDITOR} -- "${XDG_CONFIG_HOME}"/zsh-macos/zshenv'
