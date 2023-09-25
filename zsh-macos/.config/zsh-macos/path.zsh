@@ -1,4 +1,4 @@
 # PATH variable configuration 
-path=("${HOME}/Scripts/macOS Helpers" "${HOME}/.local/bin" $path)
+path=("/usr/local/sbin" "${HOME}/Scripts/macOS Helpers" "${HOME}/.local/bin" $path)
 
 export PATH
