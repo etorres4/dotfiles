@@ -2,7 +2,7 @@
 # Make a directory, then change into it
 mkcd() {
     [[ ! -d "${1}" ]] && mkdir --parents -- "${1}"
-    cd "${1}" || exit
+    cd "${1}" || false
 }
 
 autoload -Uz mkcd
