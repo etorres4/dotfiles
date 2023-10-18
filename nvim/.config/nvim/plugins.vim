@@ -6,6 +6,7 @@ Plug 'dense-analysis/ale'
 "Plug 'tweekmonster/deoplete-clang2'
 Plug 'sbdchd/neoformat'
 Plug 'junegunn/fzf.vim', { 'do': { -> fzf#install() } }
+Plug 'preservim/nerdtree'
 Plug 'stevearc/vim-arduino'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
@@ -38,8 +39,8 @@ let g:ale_linters = {
 let g:deoplete#enable_at_startup = 1
 
 " ---------- Deoplete-Clang ----------
-"g:deoplete#sources#clang#libclang_path = "/Library/Developer/CommandLineTools/usr/lib/libclang.dylib"
-"g:deoplete#sources#clang#clang_header = "/Library/Developer/CommandLineTools/usr/lib/clang"
+"g:deoplete#sources#clang#libclang_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
+"g:deoplete#sources#clang#clang_header = '/Library/Developer/CommandLineTools/usr/lib/clang'
 
 " ---------- Fzf ----------
 map <C-o> <esc>:FZF<cr>
@@ -117,6 +118,11 @@ nnoremap <silent> <f5> :call fzf#run({
             \   'options': '+m',
             \   'down':    len(<sid>buflist()) + 2
             \ })<CR>
+
+" ---------- NERDTree ----------
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
 " ---------- Neoformat ----------
 " Override python formatter
