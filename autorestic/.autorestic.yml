@@ -1,0 +1,15 @@
+version: 2
+
+locations:
+  home:
+    from: /home/etorres
+    to: krypton
+
+  pacman-conf:
+    from: /etc/pacman.d
+    to: krypton
+
+backends:
+  krypton:
+    type: sftp
+    path: krypton:/mnt/pool/backups/xenon
