@@ -6,3 +6,5 @@ email = erictorres4@protonmail.com
 	pager = nvim -R
 [color]
 	pager = no
+[init]
+	defaultBranch = main
