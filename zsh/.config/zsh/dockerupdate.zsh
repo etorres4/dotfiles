@@ -9,7 +9,6 @@ dockerupdate() {
     if [[ ! -x "$(which docker)" ]] && ([[ ! -r docker-compose.yml ]] || [[ ! -r docker-compose.yaml ]]); then
         return
     else
-        docker compose down
         until docker compose pull; do
             docker compose pull
             # Do not run this command too often
