@@ -1,10 +1,11 @@
 # Setup fzf
 # ---------
+fzf_version="$(fzf --version | cut -d ' ' -f1 | tr -d '[:space:]')"
 
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "/usr/local/Cellar/fzf/0.43.0/shell/completion.zsh"
+[[ $- == *i* ]] && source "/usr/local/Cellar/fzf/${fzf_version}/shell/completion.zsh"
 
 # Key bindings
 # ------------
-source "/usr/local/Cellar/fzf/0.43.0/shell/key-bindings.zsh"
+source "/usr/local/Cellar/fzf/${fzf_version}/shell/key-bindings.zsh"
