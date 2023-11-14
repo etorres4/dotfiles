@@ -7,7 +7,7 @@
 dockerupdate() {
     # If either docker is not installed or docker-compose file is missing, do not run
     if [[ ! -x "$(which docker)" ]] && ([[ ! -r docker-compose.yml ]] || [[ ! -r docker-compose.yaml ]]); then
-        return
+        return 1
     else
         until docker compose pull; do
             docker compose pull
