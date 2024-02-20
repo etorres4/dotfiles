@@ -50,6 +50,7 @@ alias sshconfig='"${EDITOR}" -- ${HOME}/.ssh/config'
 
 # system
 alias myip='curl ifconfig.me'
+alias caddyreload='docker exec caddy caddy fmt --overwrite /etc/caddy/Caddyfile && docker exec caddy caddy reload'
 
 # zsh
 alias zshcaliases='"${EDITOR}" "${ZDOTDIR}"/00-common-aliases.zsh'
