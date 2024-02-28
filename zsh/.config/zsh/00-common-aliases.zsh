@@ -50,7 +50,7 @@ alias sshconfig='"${EDITOR}" -- ${HOME}/.ssh/config'
 
 # system
 alias myip='curl ifconfig.me'
-alias caddyfmt='for dropin in ~/Containers/caddy/dropins/*; do docker exec caddy caddy fmt --overwrite /etc/caddy/dropins/"$f"; done'
+alias caddyfmt='for dropin in ~/Containers/caddy/dropins/*; do docker exec caddy caddy fmt --overwrite /etc/caddy/dropins/"$dropin"; done'
 alias caddyreload='docker exec caddy caddy fmt --overwrite /etc/caddy/Caddyfile && docker exec caddy caddy reload -c /etc/caddy/Caddyfile'
 
 # zsh
