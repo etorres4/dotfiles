@@ -54,11 +54,6 @@ alias -g fwla='firewall-cmd --list-all'
 alias -g fwlsp='firewall-cmd --list-ports'
 alias -g fwlss='firewall-cmd --list-services'
 
-# Programming
-# Use python-pytest-xdist plugin
-#alias pytest='pytest --numprocesses=$(nproc)'
-alias pyarchive='git archive -o rbackup-"$(python setup.py --version)".tar.gz --prefix=rbackup-"$(python setup.py --version)"/'
-
 # Personal
 alias la='ls --almost-all --color --group-directories-first --human-readable -l'
 alias ls='ls --color --group-directories-first'
