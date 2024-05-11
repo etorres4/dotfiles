@@ -40,7 +40,7 @@ alias xcah='cd -- ${XDG_CACHE_HOME:-${HOME}/.cache}'
 alias xdh='cd -- ${XDG_DATA_HOME:-${HOME}/.local/share}'
 
 # Programming
-alias activate="source '$(fd --type file \'activate$\')' || echo 'No activate file found'"
+alias activate='source "$(fd --type file "activate$")" || echo "No activate file found"'
 alias pyarchive='git archive -o rbackup-"$(python setup.py --version)".tar.gz --prefix=rbackup-"$(python setup.py --version)"/'
 # Use python-pytest-xdist plugin
 #alias pytest='pytest --numprocesses=$(nproc)'
