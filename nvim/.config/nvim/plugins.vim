@@ -125,8 +125,9 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
 " ---------- Neoformat ----------
-" Override python formatter
+" Override formatters
 let g:neoformat_enabled_python=['ruff']
+let g:neoformat_enabled_toml=['taplo']
 
 " Enable alignment
 let g:neoformat_basic_format_align = 1
